@@ -11,7 +11,14 @@ namespace FizzBuzzKata
 
         public IFizzBuzzNumber GetFizzBuzzType(int number)
         {
-            throw new NotImplementedException();
+            if (number % 5 == 0 && number % 3 == 0)
+                return new FizzBuzzNumber(number);
+            else if (number % 5 == 0)
+                return new BuzzNumber(number);
+            else if (number % 3 == 0)
+                return new FizzNumber(number);
+            else
+                return new NormalNumber(number);
         }
     }
 }

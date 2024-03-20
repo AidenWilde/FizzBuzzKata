@@ -20,13 +20,13 @@ namespace FizzBuzzKata.Tests.FizzBuzzTests
         [Test]
         public void ThenTheTypeIsNormal()
         {
-            Assert.Equals(_result.GetType(), typeof(NormalNumber));
+            Assert.That(_result.GetType(), Is.EqualTo(typeof(NormalNumber)));
         }
 
         [Test]
         public void ThenTheNumberIsTheSameAsInitialized()
         {
-            Assert.Equals(2, _result.GetValue());
+            Assert.That(2, Is.EqualTo(_result.GetValue()));
         }
     }
 }
