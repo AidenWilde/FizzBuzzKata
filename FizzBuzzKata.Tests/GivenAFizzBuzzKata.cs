@@ -7,18 +7,45 @@ namespace FizzBuzzKata.Tests
     [TestFixture]
     public class GivenAFizzBuzzKata
     {
-        Mock<IFizzBuzz> _subject;
+        FizzBuzzKata _subject;
+        private IEnumerable<IFizzBuzzNumber> _result;
 
         [SetUp]
         public void WhenItRunsWithOneHundredNumbers()
         {
-            var numbers = Enumerable.Range(0, 15).ToList();
+            _subject = new FizzBuzzKata();
             
-            _subject = new Mock<IFizzBuzz>();
+            var numbers = Enumerable.Range(0, 100).ToList();
+            _result = _subject.Execute(numbers);
+        }
 
-            _subject.Setup(_ => _.Execute(It.IsAny<IEnumerable<int>>())).Returns(
-                new List<IFizzBuzzNumber>() { }
-                );
+        [Test]
+        public void ThenThereAreOneHundredNumbers()
+        {
+
+        }
+
+        [Test]
+        public void ThenThereAreACertainNumberOfFizzBuzzNumbers()
+        {
+
+        }
+
+        [Test]
+        public void ThenThereAreACertainNumberOfFizzNumbers()
+        {
+
+        }
+
+        [Test]
+        public void ThenThereAreACertainNumberOfBuzzNumbers()
+        {
+
+        }
+
+        [Test]
+        public void ThenThereAreACertainNumberOfRegularNumbers()
+        {
 
         }
     }
