@@ -22,31 +22,36 @@ namespace FizzBuzzKata.Tests
         [Test]
         public void ThenThereAreOneHundredNumbers()
         {
-
+            Assert.That(_result.Count, Is.EqualTo(100));
         }
 
         [Test]
         public void ThenThereAreACertainNumberOfFizzBuzzNumbers()
         {
-
+            var fizzBuzzNumbers = _result.Where(_ => _.GetType() == typeof(FizzBuzzNumber));
+            Assert.That(fizzBuzzNumbers.Count, Is.EqualTo(0));
         }
 
         [Test]
         public void ThenThereAreACertainNumberOfFizzNumbers()
         {
-
+            var fizzNumbers = _result.Where(_ => _.GetType() == typeof(FizzNumber));
+            Assert.That(fizzNumbers.Count, Is.EqualTo(0));
         }
 
         [Test]
         public void ThenThereAreACertainNumberOfBuzzNumbers()
         {
 
+            var fizzBuzzNumbers = _result.Where(_ => _.GetType() == typeof(BuzzNumber));
+            Assert.That(fizzBuzzNumbers.Count, Is.EqualTo(0));
         }
 
         [Test]
         public void ThenThereAreACertainNumberOfRegularNumbers()
         {
-
+            var normalNumbers = _result.Where(_ => _.GetType() == typeof(NormalNumber));
+            Assert.That(normalNumbers.Count, Is.EqualTo(0));
         }
     }
 }

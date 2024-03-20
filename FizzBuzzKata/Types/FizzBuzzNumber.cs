@@ -2,11 +2,11 @@
 
 namespace FizzBuzzKata
 {
-    public class FizzBuzz : IFizzBuzzNumber
+    public class FizzBuzzNumber : IFizzBuzzNumber
     {
         private int _value;
 
-        public FizzBuzz(int value)
+        public FizzBuzzNumber(int value)
         {
             _value = value;
         }
