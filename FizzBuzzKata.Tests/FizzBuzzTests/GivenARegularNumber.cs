@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FizzBuzzKata.Interfaces;
+using NUnit.Framework;
 
 namespace FizzBuzzKata.Tests.FizzBuzzTests
 {
-    internal class GivenARegularNumber
+    [TestFixture]
+    public class GivenARegularNumber
     {
+        private IFizzBuzz _subject;
+        private IFizzBuzzNumber _result = default!;
+
+        [SetUp]
+        public void WhenTheNumberIsNotModulaByThreeOrFive()
+        {
+            _subject = new FizzBuzz();
+        }
+
+        [Test]
+        public void ThenTheTypeIsNormal()
+        {
+            _result = _subject.GetFizzBuzzType(2);
+            Assert.Equals(_result.GetType(), typeof(NormalNumber));
+        }
     }
 }

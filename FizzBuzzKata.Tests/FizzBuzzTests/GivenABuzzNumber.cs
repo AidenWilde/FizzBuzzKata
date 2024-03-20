@@ -1,12 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FizzBuzzKata.Interfaces;
+using NUnit.Framework;
 
 namespace FizzBuzzKata.Tests.FizzBuzzTests
 {
-    internal class GivenABuzzNumber
+    [TestFixture]
+    public class GivenABuzzNumber
     {
+        private IFizzBuzz _subject;
+        private IFizzBuzzNumber _result = default!;
+
+        [SetUp]
+        public void WhenTheNumberIsModulaByFive()
+        {
+            _subject = new FizzBuzz();
+        }
+
+        [Test]
+        public void ThenTheTypeIsBuzz()
+        {
+            _result = _subject.GetFizzBuzzType(5);
+            Assert.Equals(_result.GetType(), typeof(Buzz));
+        }
     }
 }
