@@ -2,9 +2,14 @@
 
 namespace FizzBuzzKata
 {
-    public class NormalNumber : IFizzBuzzNumber
+    public class Fizz : IFizzBuzzNumber
     {
         private int _value;
+
+        public Fizz(int value)
+        {
+            _value = value;
+        }
 
         public int GetValue()
         {

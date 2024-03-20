@@ -7,6 +7,11 @@ namespace FizzBuzzKata
     {
         private int _value;
 
+        public Buzz(int value)
+        {
+            _value = value;
+        }
+
         public int GetValue()
         {
             return _value;
