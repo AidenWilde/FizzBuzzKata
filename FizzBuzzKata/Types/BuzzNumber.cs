@@ -3,11 +3,11 @@ using FizzBuzzKata.Interfaces;
 
 namespace FizzBuzzKata
 {
-    public class Buzz : IFizzBuzzNumber
+    public class BuzzNumber : IFizzBuzzNumber
     {
         private int _value;
 
-        public Buzz(int value)
+        public BuzzNumber(int value)
         {
             _value = value;
         }

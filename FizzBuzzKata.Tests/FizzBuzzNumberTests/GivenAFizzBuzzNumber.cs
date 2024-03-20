@@ -20,7 +20,7 @@ namespace FizzBuzzKata.Tests.FizzBuzzTests
         [Test]
         public void ThenTheTypeIsFizzBuzz()
         {
-            Assert.Equals(_result.GetType(), typeof(Buzz));
+            Assert.Equals(_result.GetType(), typeof(BuzzNumber));
         }
 
         [Test]
