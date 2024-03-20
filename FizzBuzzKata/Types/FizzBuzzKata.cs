@@ -6,7 +6,12 @@ namespace FizzBuzzKata
     {
         public IEnumerable<IFizzBuzzNumber> Execute(IEnumerable<int> numbers)
         {
-            throw new NotImplementedException();
+            var fizzBuzzNumbers = new List<IFizzBuzzNumber>();
+
+            foreach(var number in numbers)
+                fizzBuzzNumbers.Add(GetFizzBuzzType(number));
+
+            return fizzBuzzNumbers;
         }
 
         public IFizzBuzzNumber GetFizzBuzzType(int number)
