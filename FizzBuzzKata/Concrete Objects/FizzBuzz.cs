@@ -9,7 +9,7 @@ namespace FizzBuzzKata
             throw new NotImplementedException();
         }
 
-        public bool GetFizzBuzzType(int number)
+        public IFizzBuzzNumber GetFizzBuzzType(int number)
         {
             throw new NotImplementedException();
         }

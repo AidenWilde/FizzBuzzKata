@@ -1,6 +1,8 @@
-﻿namespace FizzBuzzKata
+﻿using FizzBuzzKata.Interfaces;
+
+namespace FizzBuzzKata
 {
-    public class Fizz
+    public class Fizz : IFizzBuzzNumber
     {
     }
 }

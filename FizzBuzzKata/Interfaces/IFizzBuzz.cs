@@ -2,7 +2,7 @@
 {
     public interface IFizzBuzz
     {
-        public bool GetFizzBuzzType(int number);
+        public IFizzBuzzNumber GetFizzBuzzType(int number);
         public void Execute();
     }
 }

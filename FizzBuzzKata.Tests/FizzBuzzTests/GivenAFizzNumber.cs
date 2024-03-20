@@ -7,6 +7,7 @@ namespace FizzBuzzKata.Tests.FizzBuzzTests
     public class GivenAFizzNumber
     {
         private IFizzBuzz _subject;
+        private IFizzBuzzNumber _result = default!;
 
         [SetUp]
         public void WhenTheNumberIsModulaByThree()
@@ -15,10 +16,10 @@ namespace FizzBuzzKata.Tests.FizzBuzzTests
         }
 
         [Test]
-        public void ThenTheWordFizzIsOutput()
+        public void ThenTheTypeIsFizz()
         {
-            var result = _subject.GetFizzBuzzType(3);
-            Assert.Equals(result.GetType(), typeof(Fizz));
+            _result = _subject.GetFizzBuzzType(3);
+            Assert.Equals(_result.GetType(), typeof(Fizz));
         }
     }
 }
