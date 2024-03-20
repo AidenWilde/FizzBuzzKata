@@ -4,7 +4,7 @@ namespace FizzBuzzKata
 {
     public class FizzBuzzKata : IFizzBuzz
     {
-        public void Execute()
+        public IEnumerable<IFizzBuzzNumber> Execute(IEnumerable<int> numbers)
         {
             throw new NotImplementedException();
         }

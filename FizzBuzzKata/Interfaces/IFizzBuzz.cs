@@ -3,6 +3,7 @@
     public interface IFizzBuzz
     {
         public IFizzBuzzNumber GetFizzBuzzType(int number);
-        public void Execute();
+
+        public IEnumerable<IFizzBuzzNumber> Execute(IEnumerable<int> numbers);
     }
 }
