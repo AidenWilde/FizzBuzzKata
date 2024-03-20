@@ -2,6 +2,6 @@
 {
     public interface IFizzBuzzNumber
     {
-        public int Value { get; init; }
+        public int GetValue();
     }
 }

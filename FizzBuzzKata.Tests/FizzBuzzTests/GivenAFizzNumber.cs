@@ -26,7 +26,7 @@ namespace FizzBuzzKata.Tests.FizzBuzzTests
         [Test]
         public void ThenTheNumberIsTheSameAsInitialized()
         {
-            Assert.Equals(3, _result.Value);
+            Assert.Equals(3, _result.GetValue());
         }
     }
 }
