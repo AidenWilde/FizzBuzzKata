@@ -2,7 +2,7 @@
 
 namespace FizzBuzzKata
 {
-    public class FizzBuzz : IFizzBuzz
+    public class FizzBuzzKata : IFizzBuzz
     {
         public void Execute()
         {

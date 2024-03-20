@@ -4,29 +4,29 @@ using NUnit.Framework;
 namespace FizzBuzzKata.Tests.FizzBuzzTests
 {
     [TestFixture]
-    public class GivenAFizzNumber
+    public class GivenARegularNumber
     {
         private IFizzBuzz _subject;
         private IFizzBuzzNumber _result = default!;
 
         [SetUp]
-        public void WhenTheNumberIsModulaByThree()
+        public void WhenTheNumberIsNotModulaByThreeOrFive()
         {
-            _subject = new FizzBuzz();
+            _subject = new FizzBuzzKata();
 
-            _result = _subject.GetFizzBuzzType(3);
+            _result = _subject.GetFizzBuzzType(2);
         }
 
         [Test]
-        public void ThenTheTypeIsFizz()
+        public void ThenTheTypeIsNormal()
         {
-            Assert.Equals(_result.GetType(), typeof(Fizz));
+            Assert.Equals(_result.GetType(), typeof(NormalNumber));
         }
 
         [Test]
         public void ThenTheNumberIsTheSameAsInitialized()
         {
-            Assert.Equals(3, _result.GetValue());
+            Assert.Equals(2, _result.GetValue());
         }
     }
 }

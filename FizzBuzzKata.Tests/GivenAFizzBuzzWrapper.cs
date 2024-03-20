@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FizzBuzzKata.Tests.FizzBuzzTests
+namespace FizzBuzzKata.Tests
 {
-    internal class GivenAFizzBuzzWrapper
+    internal class GivenAFizzBuzzKata
     {
     }
 }
