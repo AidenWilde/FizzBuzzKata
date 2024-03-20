@@ -13,13 +13,20 @@ namespace FizzBuzzKata.Tests.FizzBuzzTests
         public void WhenTheNumberIsModulaByThree()
         {
             _subject = new FizzBuzz();
+
+            _result = _subject.GetFizzBuzzType(3);
         }
 
         [Test]
         public void ThenTheTypeIsFizz()
         {
-            _result = _subject.GetFizzBuzzType(3);
             Assert.Equals(_result.GetType(), typeof(Fizz));
+        }
+
+        [Test]
+        public void ThenTheNumberIsTheSameAsInitialized()
+        {
+            Assert.Equals(3, _result.Value);
         }
     }
 }

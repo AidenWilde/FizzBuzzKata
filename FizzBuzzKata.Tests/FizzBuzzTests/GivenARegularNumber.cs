@@ -21,5 +21,11 @@ namespace FizzBuzzKata.Tests.FizzBuzzTests
             _result = _subject.GetFizzBuzzType(2);
             Assert.Equals(_result.GetType(), typeof(NormalNumber));
         }
+
+        [Test]
+        public void ThenTheNumberIsTheSameAsInitialized()
+        {
+            Assert.Equals(2, _result.Value);
+        }
     }
 }
